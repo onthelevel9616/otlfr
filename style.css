@@ -1,20 +1,33 @@
-body {
-  font-family: Arial, sans-serif;
+:root {
+  --primary-color: #FFD700;
+  --secondary-color: #000000;
+  --background-color: #FFFFFF;
+  --font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  background: #fff;
-  color: #000;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--background-color);
+  color: var(--secondary-color);
+  line-height: 1.6;
 }
 
 .fixed-header {
-  background: #fff;
-  border-bottom: 1px solid #ccc;
+  background: var(--background-color);
+  border-bottom: 2px solid var(--secondary-color);
   padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   width: 100%;
   top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 1000;
 }
 
@@ -25,39 +38,78 @@ body {
 nav a {
   margin-left: 1rem;
   text-decoration: none;
-  color: #000;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--primary-color);
 }
 
 .cta-button {
-  background: #FFD700;
-  color: #000;
+  background: var(--primary-color);
+  color: var(--secondary-color);
   padding: 0.5rem 1rem;
   border-radius: 4px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 main {
   margin-top: 100px;
+}
+
+.service-hero {
+  background: var(--secondary-color);
+  color: var(--background-color);
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.service-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-hero p {
+  font-size: 1.2rem;
+}
+
+.gallery-content {
+  max-width: 1200px;
+  margin: 2rem auto;
   padding: 2rem;
 }
 
-.service-detail {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
 }
 
-.service-detail ul {
-  text-align: left;
-  margin: 1rem auto;
-  display: inline-block;
-  list-style: disc;
-  padding-left: 1rem;
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
 }
 
 footer {
-  background: #000;
-  color: #fff;
+  background: var(--secondary-color);
+  color: var(--background-color);
   text-align: center;
   padding: 1rem;
+}
+
+footer .footer-logo {
+  max-height: 50px;
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+footer a:hover {
+  color: var(--background-color);
 }
