@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #000;
+}
+
+.fixed-header {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.fixed-header .logo img {
+  max-height: 60px;
+}
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.cta-button {
+  background: #FFD700;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+main {
+  margin-top: 100px;
+  padding: 2rem;
+}
+
+.service-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.service-detail ul {
+  text-align: left;
+  margin: 1rem auto;
+  display: inline-block;
+  list-style: disc;
+  padding-left: 1rem;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
